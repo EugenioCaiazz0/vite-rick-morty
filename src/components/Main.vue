@@ -5,6 +5,8 @@ export default {
   data() {
     return {
       store,
+      inputSearch: "",
+      selectSearch: "",
     };
   },
   components: {
@@ -15,6 +17,31 @@ export default {
 </script>
 
 <template>
+
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="d-flex">
+        
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Select Character"
+            aria-label=""
+          />
+      
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Select Status</option>
+            <option value="1">Alive</option>
+            <option value="2">Dead</option>
+            <option value="3">Unknown</option>
+          </select>
+      
+        </div>
+        <div>
+          <div class="btn btn-info">Search</div>
+          <div class="btn btn-warning">Reset</div>
+        </div>
+      </div>
+
   <div class="wrapper d-flex">
     <div class="container d-flex flex-around">
       <div class="row row-cols-3 d-flex">
